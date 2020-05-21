@@ -1,0 +1,226 @@
+﻿.m-clear-both:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+}
+.gt-flex-grow-and-re-flex-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.gt-flex-grow {
+  flex: 1;
+}
+.gt-property-container .form-group label {
+  display: block;
+  clear: both;
+}
+.gt-property-container input.ng-invalid {
+  background: pink;
+}
+form.gt-flex-grow-and-re-flex-col,
+.no-bottom-margin {
+  margin-bottom: 0px;
+}
+.gt-position-relative {
+  position: relative;
+}
+.gt-position-absolute-bottom {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.gt-padding-10 {
+  padding: 10px;
+}
+.umb-table {
+  border: 1px solid #d8d7d9;
+}
+.umb-table-head {
+  background-color: #f3f3f5;
+}
+.umb-table-body .umb-table-row:hover {
+  background-color: #f3f3f5;
+}
+.gt-top-button-row {
+  margin-left: 0;
+  margin-bottom: 10px;
+}
+.gt-bottom-button-row {
+  margin-left: 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 10px;
+}
+.panel-flexbox .col-md-1,
+.panel-flexbox .col-md-2,
+.panel-flexbox .col-md-3,
+.panel-flexbox .col-md-4,
+.panel-flexbox .col-md-5,
+.panel-flexbox .col-md-6,
+.panel-flexbox .col-md-7,
+.panel-flexbox .col-md-8,
+.panel-flexbox .col-md-9,
+.panel-flexbox .col-md-10,
+.panel-flexbox .col-md-11,
+.panel-flexbox .col-md-12 {
+  float: left;
+}
+.panel-flexbox .col-md-12 {
+  width: 100%;
+}
+.panel-flexbox .col-md-11 {
+  width: 91.66666667%;
+}
+.panel-flexbox .col-md-10 {
+  width: 83.33333333%;
+}
+.panel-flexbox .col-md-9 {
+  width: 75%;
+}
+.panel-flexbox .col-md-8 {
+  width: 66.66666667%;
+}
+.panel-flexbox .col-md-7 {
+  width: 58.33333333%;
+}
+.panel-flexbox .col-md-6 {
+  width: 50%;
+}
+.panel-flexbox .col-md-5 {
+  width: 41.66666667%;
+}
+.panel-flexbox .col-md-4 {
+  width: 33.33333333%;
+}
+.panel-flexbox .col-md-3 {
+  width: 25%;
+}
+.panel-flexbox .col-md-2 {
+  width: 16.66666667%;
+}
+.panel-flexbox .col-md-1 {
+  width: 8.33333333%;
+}
+.panel-flexbox .col-md-pull-12 {
+  right: 100%;
+}
+.panel-flexbox .col-md-pull-11 {
+  right: 91.66666667%;
+}
+.panel-flexbox .col-md-pull-10 {
+  right: 83.33333333%;
+}
+.panel-flexbox .col-md-pull-9 {
+  right: 75%;
+}
+.panel-flexbox .col-md-pull-8 {
+  right: 66.66666667%;
+}
+.panel-flexbox .col-md-pull-7 {
+  right: 58.33333333%;
+}
+.panel-flexbox .col-md-pull-6 {
+  right: 50%;
+}
+.panel-flexbox .col-md-pull-5 {
+  right: 41.66666667%;
+}
+.panel-flexbox .col-md-pull-4 {
+  right: 33.33333333%;
+}
+.panel-flexbox .col-md-pull-3 {
+  right: 25%;
+}
+.panel-flexbox .col-md-pull-2 {
+  right: 16.66666667%;
+}
+.panel-flexbox .col-md-pull-1 {
+  right: 8.33333333%;
+}
+.panel-flexbox .col-md-pull-0 {
+  right: auto;
+}
+.panel-flexbox .col-md-push-12 {
+  left: 100%;
+}
+.panel-flexbox .col-md-push-11 {
+  left: 91.66666667%;
+}
+.panel-flexbox .col-md-push-10 {
+  left: 83.33333333%;
+}
+.panel-flexbox .col-md-push-9 {
+  left: 75%;
+}
+.panel-flexbox .col-md-push-8 {
+  left: 66.66666667%;
+}
+.panel-flexbox .col-md-push-7 {
+  left: 58.33333333%;
+}
+.panel-flexbox .col-md-push-6 {
+  left: 50%;
+}
+.panel-flexbox .col-md-push-5 {
+  left: 41.66666667%;
+}
+.panel-flexbox .col-md-push-4 {
+  left: 33.33333333%;
+}
+.panel-flexbox .col-md-push-3 {
+  left: 25%;
+}
+.panel-flexbox .col-md-push-2 {
+  left: 16.66666667%;
+}
+.panel-flexbox .col-md-push-1 {
+  left: 8.33333333%;
+}
+.panel-flexbox .col-md-push-0 {
+  left: auto;
+}
+.panel-flexbox .col-md-offset-12 {
+  margin-left: 100%;
+}
+.panel-flexbox .col-md-offset-11 {
+  margin-left: 91.66666667%;
+}
+.panel-flexbox .col-md-offset-10 {
+  margin-left: 83.33333333%;
+}
+.panel-flexbox .col-md-offset-9 {
+  margin-left: 75%;
+}
+.panel-flexbox .col-md-offset-8 {
+  margin-left: 66.66666667%;
+}
+.panel-flexbox .col-md-offset-7 {
+  margin-left: 58.33333333%;
+}
+.panel-flexbox .col-md-offset-6 {
+  margin-left: 50%;
+}
+.panel-flexbox .col-md-offset-5 {
+  margin-left: 41.66666667%;
+}
+.panel-flexbox .col-md-offset-4 {
+  margin-left: 33.33333333%;
+}
+.panel-flexbox .col-md-offset-3 {
+  margin-left: 25%;
+}
+.panel-flexbox .col-md-offset-2 {
+  margin-left: 16.66666667%;
+}
+.panel-flexbox .col-md-offset-1 {
+  margin-left: 8.33333333%;
+}
+.panel-flexbox .col-md-offset-0 {
+  margin-left: 0%;
+}

@@ -1,0 +1,6 @@
+<ul class="umb-tabs-nav">
+    <li data-ng-repeat="tab in tabs.items" class="umb-tab {{tab.active ? 'umb-tab--active' : '' }}" data-ng-show="tab.visible">
+        <a href="{{tab.url}}" data-ng-show="tab.callback === undefined">{{tab.name}}</a>
+        <a href="#" data-ng-click="tab.callback(tab.id)" data-ng-hide="tab.callback === undefined" prevent-default>{{tab.name}}</a>
+    </li>
+</ul>

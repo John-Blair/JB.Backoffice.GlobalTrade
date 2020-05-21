@@ -1,0 +1,37 @@
+<div class="umb-panel" ng-controller="GlobalTrade.Backoffice.Dialogs.DeleteConfirmationController">
+    
+    <div class="umb-overlay umb-overlay-right">
+        <div class="umb-overlay__form">
+            <div class="umb-overlay-header">
+                <h4 class="umb-overlay__title">Delete Confirmation</h4>
+            </div>
+
+            <div class="umb-overlay-container form-horizontal ">
+                    <h4>Are you sure you want to delete '<span data-ng-bind-html="model.dialogData.name"></span>'? </h4>
+                    <div data-ng-show="model.dialogData.warning !== undefined && model.dialogData.warning != ''">
+                        <p class="text-warning">{{ model.dialogData.warning }}</p>
+                    </div>
+            </div>
+
+
+            <div class="umb-overlay-drawer">
+                <div class="umb-overlay-drawer__align-right">
+
+                    <div class="umb-button">
+                        <a data-ng-click="model.close()" class="btn btn-link">
+                           Cancel
+                        </a>
+                    </div>
+
+                    <div class="umb-button">
+                        <button class="btn btn-danger" data-ng-click="model.submit(model.dialogData)">
+                            Delete
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>

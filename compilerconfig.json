@@ -1,0 +1,11 @@
+﻿[
+  
+    {
+        "outputFile": "Client/assets/css/dashboard/dashboard.css",
+        "inputFile": "Client/assets/css/dashboard/dashboard.less"
+    },
+  {
+    "outputFile": "Client/assets/css/backoffice/backoffice.css",
+    "inputFile": "Client/assets/css/backoffice/backoffice.less"
+  }
+]

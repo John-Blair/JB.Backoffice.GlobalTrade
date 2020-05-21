@@ -1,0 +1,234 @@
+﻿<div class="form-horizontal">
+
+    <div ng-show="maintenanceMode == listMode || maintenanceMode == detailsMode">
+        <div class="gt-top-button-row">
+            <div class="umb-button" ng-show="maintenanceMode == listMode">
+                <button class="btn btn-default" ng-click="create()">Create Book</button>
+            </div>
+            <div class="umb-button" ng-show="maintenanceMode == listMode">
+                <button class="btn btn-default" ng-click="refresh()">Refresh</button>
+            </div>
+            <div class="umb-button" ng-show="maintenanceMode == detailsMode">
+                <button class="btn btn-default" ng-click="edit(editBook)">Edit</button>
+            </div>
+        </div>
+
+        <div class="umb-table" ng-show="maintenanceMode == listMode">
+            <div class="umb-table-head">
+                <div class="umb-table-row">
+                    <div class="umb-table-cell">Id</div>
+                    <div class="umb-table-cell">Title</div>
+                    <div class="umb-table-cell">Price</div>
+                    <div class="umb-table-cell">Published</div>
+                    <div class="umb-table-cell">Actions</div>
+                </div>
+            </div>
+            <div class="umb-table-body">
+                <div class="umb-table-row" ng-repeat="book in books">
+                    <div class="umb-table-cell">{{book.id}}</div>
+                    <div class="umb-table-cell">{{book.title}}</div>
+                    <div class="umb-table-cell">{{book.price | number: 2}}</div>
+                    <div class="umb-table-cell">{{book.published | date : 'dd-MMM-yyyy'}} </div>
+                    <div class="umb-table-cell">
+                        <div>
+                            <button class="btn btn-default" ng-click="edit(book)">Edit</button>
+                            <button class="btn btn-default" ng-click="details(book)">Details</button>
+                            <button class="btn btn-danger" ng-click="delete(book)">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="umb-group-panel" ng-show="maintenanceMode == detailsMode">
+            <div class="umb-group-panel__header">Book Details</div>
+
+            <div class="umb-group-panel__content">
+                <div class="umb-property">
+                    <div class="control-group umb-control-group">
+                        <div class="umb-el-wrap">
+                            <label for="id" class="control-label">Id</label>
+                            <div class="controls">
+                                <div class="umb-property-editor">
+                                    <input type="number" name="id" ng-model="editBook.id" disabled />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="umb-property">
+                    <div class="control-group umb-control-group">
+                        <div class="umb-el-wrap">
+                            <label for="title" class="control-label">Title</label>
+                            <div class="controls">
+                                <div class="umb-property-editor">
+                                    <input name="title" ng-model="editBook.title" disabled />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="umb-property">
+                    <div class="control-group umb-control-group">
+                        <div class="umb-el-wrap">
+                            <label for="price" class="control-label">Price</label>
+                            <div class="controls">
+                                <div class="umb-property-editor">
+                                    <input name="price" ng-model="editBook.price" disabled />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="umb-property">
+                    <div class="control-group umb-control-group">
+                        <div class="umb-el-wrap">
+                            <label for="published" class="control-label">Published</label>
+                            <div class="controls">
+                                <div class="umb-property-editor">
+                                    <input type="text" name="published" ng-model="editBook.publishedFormatted" disabled />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="gt-bottom-button-row" ng-show="maintenanceMode == detailsMode">
+                <div class="umb-button pull-right">
+                    <button type="button" class="btn btn-default" ng-click="detailsCancel()">Cancel</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <form class="umb-group-panel" name="editForm" ng-show="maintenanceMode == editMode">
+        <div class="umb-group-panel__header">Edit</div>
+
+        <div class="umb-group-panel__content">
+
+
+            <div class="umb-property">
+                <div class="control-group umb-control-group">
+                    <div class="umb-el-wrap">
+                        <label for="edittitle" class="control-label">Title</label>
+                        <div class="controls">
+                            <div class="umb-property-editor">
+                                <input name="edittitle" required ng-model="editBook.title" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="umb-property">
+                <div class="control-group umb-control-group">
+                    <div class="umb-el-wrap">
+                        <label for="editprice" class="control-label">Price</label>
+                        <div class="controls">
+                            <div class="umb-property-editor">
+                                <input name="editprice" type="number" required ng-model="editBook.price" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" step="0.01" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="umb-property">
+                <div class="control-group umb-control-group">
+                    <div class="umb-el-wrap">
+                        <label for="editpublished" class="control-label">Published</label>
+                        <div class="controls">
+                            <div class="umb-property-editor">
+                                <input type="text" name="editpublished" required ng-model="editBook.publishedFormatted" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="gt-bottom-button-row">
+            <div class="pull-right">
+                <div class="umb-button">
+                    <button type="button" class="btn btn-default" ng-click="editCancel()">Cancel</button>
+                </div>
+                <div class="umb-button">
+                    <button type="submit" class="btn btn-success" ng-click="editForm.$valid && editSave()">Save</button>
+                </div>
+            </div>
+
+        </div>
+    </form>
+
+
+
+    <form class="umb-group-panel" name="createForm" ng-show="maintenanceMode == createMode">
+        <div class="umb-group-panel__header">Create</div>
+
+        <div class="umb-group-panel__content">
+
+
+            <div class="umb-property">
+                <div class="control-group umb-control-group">
+                    <div class="umb-el-wrap">
+                        <label for="newtitle" class="control-label">Title</label>
+                        <div class="controls">
+                            <div class="umb-property-editor">
+                                <input name="newtitle" required ng-model="newBook.title" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="umb-property">
+                <div class="control-group umb-control-group">
+                    <div class="umb-el-wrap">
+                        <label for="newprice" class="control-label">Price</label>
+                        <div class="controls">
+                            <div class="umb-property-editor">
+                                <input name="newprice" type="number" required ng-model="newBook.price" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" step="0.01" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="umb-property">
+                <div class="control-group umb-control-group">
+                    <div class="umb-el-wrap">
+                        <label for="newpublished" class="control-label">Published</label>
+                        <div class="controls">
+                            <div class="umb-property-editor">
+                                <input type="text" name="newpublished" required ng-model="newBook.publishedFormatted" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="gt-bottom-button-row">
+            <div class="pull-right">
+                <div class="umb-button">
+                    <button type="button" class="btn btn-default" ng-click="createCancel()">Cancel</button>
+                </div>
+                <div class="umb-button">
+
+                    <button type="submit" class="btn btn-success" ng-click="createForm.$valid && save()">Save</button>
+                </div>
+            </div>
+
+        </div>
+    </form>
+</div>

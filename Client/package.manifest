@@ -1,0 +1,33 @@
+﻿{
+    "sections": [
+        {
+            "alias": "globaltrade",
+            "name": "Global Trade"
+        }
+    ],
+    "dashboards": [
+        {
+            "alias": "welcome",
+            "view": "~/App_Plugins/globaltrade/backoffice/globaltrade/dashboard.html",
+            "sections": [ "globaltrade" ]
+        },
+        {
+            "alias": "settings",
+            "view": "~/App_Plugins/globaltrade/backoffice/globaltrade/settings.html",
+            "sections": [ "globaltrade" ]
+        }
+    ],
+    "javascript": [
+        "~/App_Plugins/globaltrade/lib/ngStorage/ngStorage.min.js",
+        "~/App_Plugins/globaltrade/js/globaltrade.modules.js",
+        "~/App_Plugins/globaltrade/js/globaltrade.models.js",
+        "~/App_Plugins/globaltrade/js/globaltrade.filters.js",
+        "~/App_Plugins/globaltrade/js/globaltrade.resources.js",
+        "~/App_Plugins/globaltrade/js/globaltrade.services.js",
+        "~/App_Plugins/globaltrade/js/globaltrade.directives.js",
+        "~/App_Plugins/globaltrade/js/globaltrade.controllers.js"
+    ],
+    "css": [
+        "~/App_Plugins/globaltrade/assets/css/globaltrade.min.css"
+    ]
+}

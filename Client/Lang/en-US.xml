@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<language>
+  <area alias="sections">
+    <key alias="globaltrade">Global Trade</key>
+  </area>
+    <area alias="dashboardTabs">
+        <key alias="welcome">Welcome</key>
+        <key alias="settings">Settings</key>
+    </area>
+</language>
